@@ -31,13 +31,13 @@ permalink: direct/brick-home
 	});
 </script>
 
-Brick is a pure credit card payment solution provided by Paymentwall. It allows you to develop your own payment experience for credit cards payments specifically.
+Brick is a pure credit card payment solution provided by Paymentwall. It allows you to develop your own payment experience, specifically for credit cards payments.
 
-It can be used in [Paylet](/paylet-home) as credit card gateway. Alternatively, you can integrate it using [Brick API](/apis#section-brick-onetime_token) in your application. 
+It can be used in [Paylet](/paylet-home) as a credit card gateway or you can also integrate it using [Brick API](/apis#section-brick-onetime_token) in your application. 
 
 ## Try with Brick
 
-By using Brick test cards in [Sanbox](/direct/brick/sandbox) or card information below to do a test payment.
+You can do a test payment by using Brick test cards available in [Sandbox](/direct/brick/sandbox) or the card information:
 
 * Card number: 4242 4242 4242 4242.
 
@@ -47,35 +47,35 @@ By using Brick test cards in [Sanbox](/direct/brick/sandbox) or card information
 
 * Email: test@paymentwall.com.
 
-Each successful payment has a one-time token to be used in further charge request.
+Each successful payment has a one-time token which will be used in further charge request.
 
 ## Components
 
-* [Create form](/direct/brick/create-form) to collect payment details and generate one-time token. 
+* [Create a form](/direct/brick/create-form) to collect payment details and generate a one-time token. 
 
-* Perform request according to your product type, [onetime payment](/direct/brick/charge) or [subscription](/direct/brick/subscription).
+* Perform request according to your product type: [onetime payment](/direct/brick/charge) or [subscription](/direct/brick/subscription).
 
 ## Requirements
 
 * Your payment pages must be loaded via **HTTPS**.
 
-* [3D Secure](http://www.mastercard.com/gateway/implementation_guides/3D-Secure.html) (as known as [verified by Visa](https://www.visaeurope.com/making-payments/verified-by-visa/)) should be implemented into your payment system. See how to [apply 3D Secure](/direct/brick/3dSecure) in Brick.
+* [3D Secure](http://www.mastercard.com/gateway/implementation_guides/3D-Secure.html) ([verified by Visa](https://www.visaeurope.com/making-payments/verified-by-visa/)) should be implemented into your payment system. See how to [apply 3D Secure](/direct/brick/3dSecure) in Brick.
 
-* A Paymentwall project with Digital Goods API enabled.
+* A Paymentwall project which is using the the Digital Goods API.
 
 ## Use Brick
 
-We assume that you have created a Paymentwall project.
+Once you have created a Paymentwall project, you need to:
 
-+ Get your project credentails, click Brick logo on your project and you will find following project and secret key combinations provided by Paymentwall:
-	- Brick Test Keys. A random 32-bit string started with ```t_``` and used in sandbox environment for payment flow verification.
-	- Brick Live Keys. A random 32-bit string and used to collect payments from your customers. To have it, your project will needs to be reviewed by us.
++ Get your project credentails, click the Brick logo on your project and you will find a project and secret key provided by Paymentwall:
+	- Brick Test Keys. A random 32-bit string starting with the prefix ```t_``` which is used in the sandbox environment for payment flow verification.
+	- Brick Live Keys. A random 32-bit string which is used to collect payments from your customers. To obtain the Live keys, your project needs to be reviewed by our team.
 
-* Integrate Brick components in your system
-
-See [components](#components) for more details.
+* Integrate Brick components in your system. See [components](#components) for more details.
 
 * Setup Pingback listener
 
-[Pingback](/default-pingback) is Paymentwall's instant payment notification. Each pingback has a unique reference ID in our system, please store it and proceed delivery according to our pingback.
+	- [Pingback](/default-pingback) is Paymentwall's instant payment notification. Each pingback has a unique reference ID in our system. Kindly store it and proceed with the delivery according to our pingback request.
+
+
 
